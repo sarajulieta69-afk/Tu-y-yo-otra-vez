@@ -1,61 +1,214 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tú y yo, otra vez 💗</title>
-
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #ffd6e7, #ff9fbd);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-family: Georgia, serif;
-      color: #741638;
-    }
-
-    .contenido {
-      padding: 30px;
-    }
-
-    h1 {
-      font-size: 42px;
-    }
-
-    p {
-      font-size: 20px;
-      line-height: 1.6;
-    }
-
-    button {
-      padding: 15px 30px;
-      border: none;
-      border-radius: 30px;
-      background: #a7194b;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tú y yo, otra vez 💗</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:#fff1f7;color:#351d2b;overflow-x:hidden}
+section{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:35px 18px;position:relative;overflow:hidden}
+.card{width:min(850px,94vw);background:rgba(255,255,255,.88);border:2px solid #ffb5d2;border-radius:28px;padding:32px 24px;box-shadow:0 12px 35px rgba(130,35,75,.15);text-align:center;position:relative;z-index:2}
+h1,h2{margin-top:0;color:#c52f67}
+h1{font-size:clamp(32px,8vw,60px)}
+h2{font-size:clamp(28px,6vw,44px)}
+p{font-size:18px;line-height:1.65;margin:13px auto;max-width:720px}
+.small{font-size:15px}
+button{border:0;border-radius:999px;padding:14px 25px;background:#d92f69;color:white;font-size:17px;font-weight:bold;cursor:pointer;box-shadow:0 7px 18px rgba(180,30,80,.25);margin:10px}
+button:hover{transform:translateY(-2px)}
+.heart{position:absolute;font-size:20px;animation:float 7s linear infinite;opacity:.6}
+@keyframes float{0%{transform:translateY(105vh) rotate(0);opacity:0}15%{opacity:.7}100%{transform:translateY(-15vh) rotate(180deg);opacity:0}}
+.pixel{position:absolute;width:10px;height:10px;background:#e84d82;opacity:.35}
+.timeline{text-align:left;max-width:680px;margin:auto}
+.timeline p{border-left:4px solid #ff9fc4;padding-left:18px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin-top:22px}
+.photo{height:160px;border-radius:18px;border:2px dashed #ee83ad;background:#ffe0ec;display:flex;align-items:center;justify-content:center;color:#a43a62;font-weight:bold;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+.spidey{font-size:65px;margin:10px}
+.map{font-size:55px;margin:18px}
+.player{background:#ffe1ed;border-radius:22px;padding:25px;margin:20px auto;max-width:500px}
+.lock{font-size:55px}
+#secretContent{display:none}
+.final{background:linear-gradient(135deg,#ffbad5,#ffdce9)}
+.yes{background:#c9275f}
+.note{background:#fff7fb;border-radius:18px;padding:15px;margin-top:18px;font-size:14px}
+</style>
 </head>
-
 <body>
 
-  <div class="contenido">
+<!-- ================= EDITA AQUÍ =================
+Puedes cambiar los textos entre comillas sin tocar el diseño.
+Para fotos: reemplaza foto1.jpg, foto2.jpg, etc. por tus archivos.
+Para el video: reemplaza video.mp4.
+================================================= -->
 
-    <h1>Hola, mi bebé titita 💗</h1>
+<script>
+const hearts = ["💗","💗","💗","💗","💗","💗","💗"];
+hearts.forEach((h,i)=>{
+  const x=document.createElement("div"); x.className="heart"; x.textContent=h;
+  x.style.left=(Math.random()*100)+"%";
+  x.style.animationDelay=(Math.random()*6)+"s";
+  x.style.animationDuration=(5+Math.random()*5)+"s";
+  document.body.appendChild(x);
+});
+</script>
 
+<section id="inicio">
+  <div class="card">
+    <div class="spidey">🕷️</div>
+    <h1>Hola, mi bebé titita</h1>
     <p>Hize algo pensado en noshotash dosh 💗</p>
-
     <p>Te amo Muto y espelo te gute 💗</p>
-
-    <button>💗 ENTRAR 💗</button>
-
+    <button onclick="go('historia')">💗 ENTRAR 💗</button>
   </div>
+</section>
 
+<section id="historia">
+<div class="card">
+<h2>Nuestra historia 💗</h2>
+<div class="timeline">
+<p>Cuando nos conocimos por TikTok pensé que no funcionaría o que simplemente no me contestarías, amor JAJAJJA.</p>
+<p>Pero mira dónde estamos ahora… 💗</p>
+<p>Me acuerdo cuando apenas nos conocimos y nos poníamos súper nerviosas entre nosotras.</p>
+<p>También recuerdo cuando nuestra confianza se fue construyendo paso a paso. 💗</p>
+<p>¿Sabes qué me gusta, amor?</p>
+<p>Que siempre nos acordamos de que al inicio de nuestra relación decíamos que queríamos conocernos al 100%.</p>
+<p>Y miramos ahora, amor… nos conocemos demasiado bien 😭.</p>
+<p>Aunque hayamos pasado por muchas dificultades, quiero que sepas algo:</p>
+<p><b>Mi amor por vos nunca ha disminuido ni lo hará nunca. 💗</b></p>
+<p>Mi bebé, siempre quiero que estemos juntas.</p>
+<p>Y sabes que siempre te voy a amar… con todito de mí. 💗</p>
+</div>
+<button onclick="go('fotos')">Ver nuestras fotos 💗</button>
+</div>
+</section>
+
+<section id="fotos">
+<div class="card">
+<h2>Nuestros recuerdos 💗</h2>
+<p class="small">Aquí puedes poner las fotos de ustedes.</p>
+<div class="gallery">
+<div class="photo"><img src="foto1.jpg" onerror="this.style.display='none';this.parentElement.textContent='TU FOTO 1'"></div>
+<div class="photo"><img src="foto2.jpg" onerror="this.style.display='none';this.parentElement.textContent='TU FOTO 2'"></div>
+<div class="photo"><img src="foto3.jpg" onerror="this.style.display='none';this.parentElement.textContent='TU FOTO 3'"></div>
+<div class="photo"><img src="foto4.jpg" onerror="this.style.display='none';this.parentElement.textContent='TU FOTO 4'"></div>
+<div class="photo"><img src="foto5.jpg" onerror="this.style.display='none';this.parentElement.textContent='TU FOTO 5'"></div>
+<div class="photo"><img src="foto6.jpg" onerror="this.style.display='none';this.parentElement.textContent='TU FOTO 6'"></div>
+</div>
+<button onclick="go('detalle')">Hay algo más… 💗</button>
+</div>
+</section>
+
+<section id="detalle">
+<div class="card">
+<div class="spidey">🕷️</div>
+<h2>Un pequeño detalle para ti 💗</h2>
+<p>Porque sé cuánto te gusta Spider-Man y quería dejar un pedacito de eso en algo que hice especialmente para vos.</p>
+<p>Tal vez sea un detalle pequeño, pero está hecho pensando en ti.</p>
+<div class="note">🕸️ Un poquito de Spider-Man, un poquito de nosotras y muchísimo amor. 💗</div>
+<button onclick="go('lejos')">Seguir 💗</button>
+</div>
+</section>
+
+<section id="lejos">
+<div class="card">
+<h2>Aunque estés lejos… 💗</h2>
+<div class="map">📱💗📱</div>
+<p>Hay kilómetros entre nosotras…</p>
+<p>pero de alguna forma siempre encontramos la manera de estar juntash. 💗</p>
+<p>Casi siempre estamos en llamada. Hablamos de todo, de nada, nos acompañamos… y hasta nos quedamos dormidas juntas aunque sea a través de una pantalla. 🥹💗</p>
+<p>Y cómo olvidar nuestro intento de hacer arepas juntas JAJAJAJA. 😭</p>
+<p>No quedaron tan bien… pero hacerlas juntas fue de mis momentos favoritos. 💗</p>
+<p>También me acompañas en mis pequeños momentos: cuando me maquillo, cuando hablamos, cuando simplemente quiero tenerte ahí…</p>
+<p>Y aunque estés al otro lado de una pantalla, tu compañía se siente demasiado cerquita. 💗</p>
+<p><b>No necesitamos estar en el mismo lugar para sentir que estamos juntas. 💗</b></p>
+<button onclick="go('cancion')">Nuestra canción 🎵</button>
+</div>
+</section>
+
+<section id="cancion">
+<div class="card">
+<h2>Nuestra canción 💗</h2>
+<p>Hay canciones que simplemente gustan…</p>
+<p>Y hay canciones que terminan convirtiéndose en parte de una historia. 💗</p>
+<p>Desde el principio estuvo esta canción y no sé por qué, pero cada vez que la escucho pienso en vos.</p>
+<div class="player">
+<h3>True Love</h3>
+<p class="small">Pon aquí tu audio legalmente obtenido o un enlace a la canción.</p>
+<a href="https://www.youtube.com/results?search_query=True+Love" target="_blank">
+<button>🎵 ESCUCHAR TRUE LOVE</button>
+</a>
+</div>
+<p>Supongo que siempre va a tener un pedacito de nosotras. 💗</p>
+<button onclick="go('quiero')">Lo que quiero esta vez 💗</button>
+</div>
+</section>
+
+<section id="quiero">
+<div class="card">
+<h2>Lo que quiero esta vez 💗</h2>
+<p>Quiero volver a reírme contigo.</p>
+<p>Quiero volver a tener nuestras llamadas.</p>
+<p>Quiero seguir conociendo cada parte de ti.</p>
+<p>Quiero hacer muchísimos más recuerdos contigo.</p>
+<p>Quiero seguir acompañándote en tus días, incluso cuando estemos lejos.</p>
+<p><b>Quiero que volvamos a elegirnos. 💗</b></p>
+<p>Y quiero que esta vez hagamos nuestra historia todavía más bonita.</p>
+<p>Porque si algo tengo claro, es que todavía quiero un futuro contigo. 💗</p>
+<button onclick="go('secreto')">🔒 Hay algo que quiero decirte…</button>
+</div>
+</section>
+
+<section id="secreto">
+<div class="card">
+<div class="lock">🔒</div>
+<h2>Una parte secreta 💗</h2>
+<p>Pero esto es solo para vos.</p>
+<button onclick="reveal()">💗 ABRIR 💗</button>
+<div id="secretContent">
+<p>Esta vez no quería escribirte algo…</p>
+<p><b>Quería que me escucharas decirlo. 🥹💗</b></p>
+<video controls style="width:100%;max-width:600px;border-radius:20px" src="video.mp4">
+Tu navegador no puede reproducir este video.
+</video>
+<p>Bueno… ahora sí. 😭💗</p>
+<p>Solo me queda preguntarte una cosa.</p>
+<button onclick="go('final')">Continuar 💗</button>
+</div>
+</div>
+</section>
+
+<section id="final" class="final">
+<div class="card">
+<h2>Y ahora sí…</h2>
+<p>💗 Tengo una última pregunta 💗</p>
+<div class="photo" style="height:260px;margin:20px auto;max-width:500px">
+<img src="foto-final.jpg" onerror="this.style.display='none';this.parentElement.textContent='PON AQUÍ TU FOTO FAVORITA'">
+</div>
+<h1>¿Quieres volver a ser mi novia? 💗</h1>
+<button class="yes" onclick="answer()">SÍ 🥺💗</button>
+<button class="yes" onclick="answer()">CLARO QUE SÍ 💗</button>
+<div id="answer" style="display:none">
+<h2>Entonces… 💗</h2>
+<p><b>volvamos a escribir nuestra historia.</b></p>
+<p>Esta vez, juntas, con muchísimo más amor. 💗</p>
+<div class="spidey">🕷️ 💗 🕷️</div>
+</div>
+</div>
+</section>
+
+<script>
+function go(id){document.getElementById(id).scrollIntoView({behavior:"smooth"})}
+function reveal(){document.getElementById("secretContent").style.display="block"}
+function answer(){
+ document.getElementById("answer").style.display="block";
+ for(let i=0;i<35;i++){
+  const p=document.createElement("div"); p.className="heart"; p.textContent="💗";
+  p.style.left=(40+Math.random()*20)+"%"; p.style.animationDuration=(2+Math.random()*3)+"s";
+  document.body.appendChild(p);
+ }
+}
+</script>
 </body>
 </html>
